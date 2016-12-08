@@ -1,0 +1,45 @@
+{{!< default}}
+
+<div class="homelogo">
+    {{> logo}}
+    {{navigation}}
+</div>
+
+<div class="slides-container">
+    <div class="bss-slides slideshow">
+    {{#foreach posts}}
+        <figure>
+            {{#if image}}
+        <img src="{{image}}" alt="{{{title}}}" width="100%"/>
+            {{/if}}
+            <figcaption><a href="{{url}}">{{{title}}}</a></figcaption> 
+        </figure>
+    {{/foreach}}
+    </div>
+    <footer>
+        {{> footer}}
+    </footer>
+</div>
+
+<div id="preload">
+{{#foreach posts}}
+    {{#if image}}
+         <img src="{{image}}" alt="{{{title}}}" width="1" height="1"/>
+    {{/if}}
+{{/foreach}}
+</div>
+
+<script type="text/javascript" src="{{asset "js/hammer.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/slideshow.js"}}"></script>
+
+<script>
+    var opts = {
+        auto : {
+            speed : 4500, 
+            pauseOnHover : true
+        },
+        fullScreen : false, 
+        swipe : true
+    };
+    makeBSS('.slideshow', opts);
+</script>

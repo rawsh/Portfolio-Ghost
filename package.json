@@ -1,0 +1,11 @@
+{
+  "name": "Portfolio by Robert Washbourne",
+  "version": "1.1.8",
+  "description": "Artist portfolio for Ghost",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikedidthis/ghost-caesar.git"
+  },
+  "author": "rawsh",
+  "homepage": "http://devpy.me"
+}

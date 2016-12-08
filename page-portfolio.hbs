@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{> logo}}
+
+{{! The main content area on the homepage }}
+<main role="main">
+    <div class="main__wrapper" >
+        {{#if @blog.navigation}}
+        	{{navigation}}
+        {{/if}}
+        <div id="cover" style="background-color: #dbdddc;width: 100vw;position: absolute;left: 0;">
+            <div class="isotope">
+                {{! Each post will be output using this markup }}
+                {{#get "posts"}}
+                    {{#foreach posts}}
+                        {{#if image}}
+                             <a href="{{url}}" class="isotope-item"><img src="{{image}}" alt="{{{title}}}" class="homeimg"/>
+                        {{/if}}
+                    {{/foreach}}
+                {{/get}}
+                <footer class="isotope-item">
+                    {{> footer}}
+                </footer>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+<script>
+var $grid = $('.isotope').isotope({
+    isInitLayout: false,
+});
+
+$grid.isotope('on', 'layoutComplete', function (isoInstance, laidOutItems) {
+    $("#cover").css('background-color','transparent');
+    $(".isotope").css('z-index','0');
+});
+
+var $grid = $('.isotope').isotope({
+    itemSelector: '.isotope-item',
+    masonry: {
+        gutter: 10,
+        isFitWidth: true
+    }
+});
+</script>

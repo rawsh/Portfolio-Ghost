@@ -1,0 +1,47 @@
+{{!< default}}
+
+{{> logo}}
+
+<main role="main">
+    <div class="main__wrapper">
+        {{#if @blog.navigation}}
+        	{{navigation}}
+        {{/if}}
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        <article class="{{post_class}}">
+        {{#post}}
+            {{#contentFor "metaTags"}} 
+                <meta property="article:author" content="{{author.name}}">
+            {{/contentFor}}
+            
+            <div class="leftphoto">
+            {{#if image}}
+            	<div class="post__media">
+            		<img src="{{image}}" alt="{{{title}}}" />
+            	</div>
+            {{/if}}
+            </div>
+                
+            <div class="centered">    
+                <header class="post__header--subpage">
+                    <h2 class="post__title post__title--subpage">
+                        <a href="{{url}}" class="post__link post__title_link">{{{title}}}</a>
+                    </h2>
+                </header>
+                
+                
+                <section class="post__content">
+                     {{content}}
+                </section>
+                
+                <footer>
+                    {{> footer}}
+                </footer>
+            </div>
+            
+            
+        {{/post}}
+        </article>
+    </div>
+</main>
