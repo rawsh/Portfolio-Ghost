@@ -8,12 +8,11 @@
 <div class="slides-container">
     <div class="bss-slides slideshow">
     {{#foreach posts}}
+        {{#if image}}
         <figure>
-            {{#if image}}
         <img src="{{image}}" alt="{{{title}}}" width="100%"/>
-            {{/if}}
-            <figcaption><a href="{{url}}">{{{title}}}</a></figcaption> 
         </figure>
+        {{/if}}
     {{/foreach}}
     </div>
     <footer>
