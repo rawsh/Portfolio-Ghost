@@ -4,6 +4,8 @@ Ghost Theme for artists using sliders, a grid list, and styled pages. Client nev
 
 ![](http://s3.amazonaws.com/theoatmeal-img/comics/exposure/exposure.png)
 
+<img src="http://s3.amazonaws.com/theoatmeal-img/comics/exposure/exposure.png" width=300>
+
 
 * ✔️ Commercial use
 * ✔️ Modification
