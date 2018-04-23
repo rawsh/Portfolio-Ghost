@@ -1,6 +1,6 @@
 # Portfolio
 
-Ghost Theme for Victoria Krasnoshchekova using sliders, a grid list, and styled pages.
+Ghost Theme for artists using sliders, a grid list, and styled pages. Client never paid and cut off communication, so I finished the website and uploaded it here for your benefit :) 
 
 ![](http://i.imgur.com/gV3qAnQ.jpg)
 
