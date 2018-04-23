@@ -7,6 +7,7 @@ Ghost Theme for artists using sliders, a grid list, and styled pages. Client nev
 * ✔️ Modification
 * ✔️ Distribution
 * ✔️ Private use
+* ✔️ Whatever the F\*\*k you want
 
 
 ![](http://i.imgur.com/gV3qAnQ.jpg)
